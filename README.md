@@ -1,2 +1,4 @@
 # recyclenear.me
-Have e-waste laying around but don't want to wait? We give you access to recycling centers near you.
+A website that will give the everyday person a green thumb :+1::recycle:
+
+![logo](assets/favicon.png)
