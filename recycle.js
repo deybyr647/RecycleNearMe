@@ -41,12 +41,14 @@ let setQuote = () => {
             let quotesArr = quotesJSON;
             quotesArr.length = 50;
             let q;
+            q = quotesArr[randInt(0, quotesArr.length)];
+            quote.innerHTML = `${q.text} - ${q.author}`;
 
             setInterval(() => {
-                q = quotesArr[randInt(0,quotesArr.length)];
-                quote.innerHTML = q.text;
+                q = quotesArr[randInt(0, quotesArr.length)];
+                quote.innerHTML = `${q.text} - ${q.author}`;
 
-            }, 1000);
+            }, 5000);
         })
 }
 

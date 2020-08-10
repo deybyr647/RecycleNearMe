@@ -57,7 +57,7 @@ body {
 }
 
 .quote {
-    animation: blinkingText 0.9s infinite;
+    animation: blinkingText 5.1s infinite;
 }
 
 @keyframes blinkingText {
@@ -78,7 +78,7 @@ body {
     }
 
     100% {
-        color: black;
+        color: transparent;
     }
 }
 
