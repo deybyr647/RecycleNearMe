@@ -1,12 +1,12 @@
 body {
-    background-image: linear-gradient(to right, #90A955, #4F772D);
+    background-color: #F7FFF6;
 }
 
 .topnav {
 
     border-radius: 50px;
 
-    background-color: #ecf39e;
+    background-color: rgb(63, 124, 172);
 
     overflow: hidden;
 
@@ -23,7 +23,7 @@ body {
 
     float: left;
 
-    color: #90a955;
+    color: black;
 
     text-align: center;
 
@@ -38,9 +38,8 @@ body {
 .topnav a:hover {
     position: sticky;
 
-    background-color: #ecf39e;
 
-    color: #31572c;
+    color: #7b7263;
 
 }
 
@@ -88,22 +87,12 @@ body {
     align-items: center;
     justify-content: center;
     padding: 2px;
-    background-color: #31572C;
+    background-color: #87D68D;
     width: 100%;
     margin-top: 50px;
     border: 1px solid transparent;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.blog {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    background-color: #4F772D;
-    margin: 10px;
-    border: 1px solid transparent;
-    border-radius: 10px;
 }
 
 .article {
@@ -112,7 +101,7 @@ body {
     align-self: flex-start;
     border: 1px solid transparent;
     border-radius: 10px;
-    background-color: white;
+    background-color: #F7FFF6;
     margin: 20px;
 }
 
@@ -151,28 +140,22 @@ a:hover {
 }
 
 /*About Us Page*/
+.aboutUsBody{
+    background-color: #93B48B;
+}
+
 .aboutUs-container {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     padding: 2px;
-    background-color: #31572C;
+    background-color: #87D68D;
     width: 100%;
     margin-top: 50px;
     border: 1px solid transparent;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.aboutUs {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    background-color: #4F772D;
-    margin: 10px;
-    border: 1px solid transparent;
-    border-radius: 10px;
 }
 
 .team-member {
@@ -181,7 +164,7 @@ a:hover {
     align-self: flex-start;
     border: 1px solid transparent;
     border-radius: 10px;
-    background-color: white;
+    background-color: #F7FFF6;
     margin: 20px;
 }
 
@@ -236,16 +219,21 @@ a:hover {
 .description
 { 
     text-align: center;
-    color:rgb(255, 255, 255);
-    margin
+    
+   background-color: transparent;
+    margin-left: 250px;
+    margin-right: 250px;
+    font-size: large;
+    font-family: cursive;
+   
     /* 
     display: flex;
     padding: 5px;
-    background-color: rgb(55, 99, 49);
+    
     width: 99%;
     margin-top: 50px;
     border: 1px solid transparent;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+     */
    
 }
