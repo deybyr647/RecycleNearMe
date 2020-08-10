@@ -1,12 +1,11 @@
 body {
-   
-    background-image: linear-gradient(to right, #90A955 , #4F772D);
+    background-image: linear-gradient(to right, #90A955, #4F772D);
 }
 
 .topnav {
 
     border-radius: 50px;
-    
+
     background-color: #ecf39e;
 
     overflow: hidden;
@@ -45,19 +44,19 @@ body {
 
 }
 
-.quoteArea{
+.quoteArea {
     display: flex;
     flex-flow: column wrap;
     margin-top: 20px;
 }
 
-.quoteArea h4{
+.quoteArea h4 {
     text-align: center;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.quote{
+.quote {
     animation: blinkingText 0.9s infinite;
 }
 
@@ -83,7 +82,7 @@ body {
     }
 }
 
-.blog-container{
+.blog-container {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -97,7 +96,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.blog{
+.blog {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -107,7 +106,7 @@ body {
     border-radius: 10px;
 }
 
-.article{
+.article {
     clear: both;
     display: flex;
     align-self: flex-start;
@@ -117,7 +116,7 @@ body {
     margin: 20px;
 }
 
-.article img{
+.article img {
     float: left;
     width: 200px;
     border-radius: 20px;
@@ -125,27 +124,28 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.article h4{
+.article h4 {
     text-align: center;
 }
 
-.article p{
+.article p {
     text-align: justify;
     padding: 20px;
 }
 
 .footer {
-    margin-top: 20px ;
+    margin-top: 20px;
     text-align: center;
     padding: 1rem;
     text-align: center;
     font-family: 'IBM Plex Sans', sans-serif;
-  }
-  
-a {
- color:black;
- text-decoration: none;
 }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
 a:hover {
-color:rgb(36, 105, 59);
+    color: rgb(36, 105, 59);
 }
