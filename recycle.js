@@ -1,7 +1,8 @@
+//Database Stuff
+
 let database = firebase.database().ref()
 
 let testUsername = 'deybyr647', testFirstName='Deyby', testLastName='Rodriguez', testEmail='deybyr647@gmail.com', testPassword='testPassword', testSavedArticles = ['medium', 'e'];
-
 
 let refreshDB = () => {
     //e.preventDefault();
@@ -22,4 +23,29 @@ class User{
         this.password = password;
         this.savedArticles = savedArticles;
     }
+}
+
+// Quotes stuff
+let quote = document.querySelector('.quote');
+let quotesSrc = 'https://type.fit/api/quotes';
+
+let randInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
+
+fetch(quotesSrc)
+        .then((response) => (
+            response.json()
+        ))
+
+        .then((quotesJSON) => {
+            let quotesArr = quotesJSON;
+            quotesArr.length = 50;
+            let q = quotesArr[randInt(0, quotesArr.length)];
+            
+            refreshQuote(q);
+        })
+
+
+let refreshQuote = (quoteArr) => {
+    let q = quoteArr[]
+    quote.innerHTML = q.text;
 }
