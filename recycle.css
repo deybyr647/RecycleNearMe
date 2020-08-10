@@ -1,0 +1,47 @@
+body{
+    background-color: #90A955;
+}
+
+
+.topnav { 
+
+    background-color: #ecf39e; 
+
+    overflow: hidden; 
+
+    display: flex; 
+
+    justify-content: space-around; 
+
+    font-family: 'IBM Plex Sans', sans-serif; 
+   
+
+  } 
+  .topnav a { 
+
+    float: left; 
+
+    color: #90a955; 
+
+    text-align: center; 
+
+    padding: 16px 17px; 
+
+    text-decoration: none; 
+
+    font-size: 18px; 
+
+  } 
+.topnav a:hover { 
+    position: sticky;
+
+  background-color: #ecf39e;  
+
+  color: #31572c; 
+
+} 
+
+.footer{
+    margin: ;
+    text-align: center;
+}
