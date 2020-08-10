@@ -31,7 +31,8 @@ let quotesSrc = 'https://type.fit/api/quotes';
 
 let randInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
-fetch(quotesSrc)
+let setQuote = () => {
+    fetch(quotesSrc)
         .then((response) => (
             response.json()
         ))
@@ -39,13 +40,14 @@ fetch(quotesSrc)
         .then((quotesJSON) => {
             let quotesArr = quotesJSON;
             quotesArr.length = 50;
-            let q = quotesArr[randInt(0, quotesArr.length)];
-            
-            refreshQuote(q);
+            let q;
+
+            setInterval(() => {
+                q = quotesArr[randInt(0,quotesArr.length)];
+                quote.innerHTML = q.text;
+
+            }, 1000);
         })
-
-
-let refreshQuote = (quoteArr) => {
-    let q = quoteArr[]
-    quote.innerHTML = q.text;
 }
+
+window.onload = setQuote();
