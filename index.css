@@ -1,0 +1,89 @@
+/*Main Page*/
+.quoteArea {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 80px;
+}
+
+.quoteArea h4 {
+    text-align: center;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+}
+
+.quote {
+    animation: blinkingText 5.1s infinite;
+}
+
+@keyframes blinkingText {
+    0% {
+        color: black;
+    }
+
+    49% {
+        color: transparent;
+    }
+
+    50% {
+        color: transparent;
+    }
+
+    99% {
+        color: transparent;
+    }
+
+    100% {
+        color: transparent;
+    }
+}
+
+.description{ 
+    text-align: center;
+    background-color: transparent;
+    margin-left: 380px;
+    margin-right: 380px;
+    font-size: 25px;
+    font-family: cursive;
+}
+
+.articles-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    background-color: #87D68D;
+    width: 100%;
+    margin-top: 50px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.article {
+    clear: both;
+    display: flex;
+    align-self: flex-start;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #F7FFF6;
+    margin: 20px;
+}
+
+.article img {
+    float: left;
+    width: 200px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.article h4 {
+    text-align: center;
+}
+
+.article p {
+    text-align: justify;
+    padding: 20px;
+}

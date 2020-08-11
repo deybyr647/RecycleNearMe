@@ -1,0 +1,80 @@
+/*About Us Page*/
+.aboutUsBody{
+    background-color: #76a56a;
+}
+
+.aboutUs-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    background-color: #87D68D;
+    width: 100%;
+    margin-top: 90px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.team-member {
+    clear: both;
+    display: flex;
+    align-self: flex-start;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #F7FFF6;
+    margin: 20px;
+}
+
+.team-member img {
+    float: left;
+    width: 250px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.team-member h4 {
+    text-align: center;
+}
+
+.team-member p {
+    text-align: justify;
+    padding: 20px;
+}
+
+.social-media-container{
+    display: flex;
+    justify-content: center;
+}
+
+.social-medias{
+    display: flex;
+}
+
+.social-medias ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.social-medias li {
+    list-style-type: none;
+    float: left;
+    padding-right: 100px;
+    padding-bottom: 20px;
+}
+
+.social-medias a {
+    display: block;
+}
+
+.social-medias i {
+    color: black;
+    font-size: 36px;
+}
+
+.social-medias i:hover{
+    color: #72dae7;
+}
