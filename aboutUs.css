@@ -82,3 +82,18 @@
 {
 
 }
+@media(max-width: 500px)
+{
+    .topnav
+    {
+        width: 80%;
+    }
+    .team-member
+    {
+        width: 90%;
+    }
+    .bio
+    {
+        width: 8%;
+    }
+}

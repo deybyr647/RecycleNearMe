@@ -1,4 +1,5 @@
 /*Main Page*/
+
 .quoteArea {
     display: flex;
     flex-flow: column wrap;
@@ -91,6 +92,10 @@
     text-align: justify;
     padding: 20px;
 }
+.articles-container
+{
+padding: 20px;
+}
 @media(max-width: 900px)
 {
     .description
@@ -101,5 +106,29 @@
     margin-right: 320px;
     font-size: 15px;
     font-family: cursive;
+    }
+}
+@media(max-width: 500px)
+{
+    .description
+    {
+        
+    background-color: transparent;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 15px;
+    font-family: cursive;
+    }
+    .topnav
+    {
+        width: 92%;
+    }
+}
+@media(max-width: 330px)
+{
+    .topnav
+    {
+        width: 110%;
+        
     }
 }

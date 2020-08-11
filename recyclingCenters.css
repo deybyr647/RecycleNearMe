@@ -1,0 +1,15 @@
+.mapContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    flex-flow: column wrap;
+}
+@media(max-width: 500px)
+{
+    
+    .topnav
+    {
+        width: 92%;
+    }
+}
