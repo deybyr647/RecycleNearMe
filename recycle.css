@@ -93,7 +93,7 @@ body {
     }
 }
 
-.blog-container {
+.articles-container {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -148,7 +148,7 @@ a {
 }
 
 a:hover {
-    color: rgb(36, 105, 59);
+    color: #72dae7;
 }
 
 /*About Us Page*/
@@ -226,6 +226,10 @@ a:hover {
 .social-medias i {
     color: black;
     font-size: 36px;
+}
+
+.social-medias i:hover{
+    color: #72dae7;
 }
 
 .description
