@@ -1,5 +1,5 @@
 //News Articles
-let articlesSrc = `https://gnews.io/api/v3/search?q=recycling|ecology&token=4865d69f5b43d26383fdad98b6d5e27c`;
+let articlesSrc = `https://gnews.io/api/v3/search?image=required&q=recycling|ecology&token=4865d69f5b43d26383fdad98b6d5e27c`;
 let articlesContainer = document.querySelector('.articles-container');
 
 let displayArticles = (articleObj) => {
