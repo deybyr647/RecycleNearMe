@@ -7,7 +7,7 @@
 
 .quoteArea h4 {
     text-align: center;
-    color: black;
+    color: #87D68D;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
 }
@@ -18,7 +18,11 @@
 
 @keyframes blinkingText {
     0% {
-        color: black;
+        color: #87D68D;
+    }
+    30%
+    {
+        color: #87D68D;
     }
 
     49% {
@@ -86,4 +90,16 @@
 .article p {
     text-align: justify;
     padding: 20px;
+}
+@media(max-width: 900px)
+{
+    .description
+    {
+        text-align: center;
+    background-color: transparent;
+    margin-left: 320px;
+    margin-right: 320px;
+    font-size: 15px;
+    font-family: cursive;
+    }
 }
