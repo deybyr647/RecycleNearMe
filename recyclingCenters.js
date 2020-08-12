@@ -1,65 +1,55 @@
-let locationTrigger = document.querySelector('#queryLocation');
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGV5YnlyNjQ3IiwiYSI6ImNrZGt0OXZkdTByejQyd3Mya211YWh3enUifQ.ugRwxLxNtb5C204DEjS1WQ';
+const proxy = 'https://cors-anywhere.herokuapp.com/';
+let geolocationTrigger = document.querySelector('#queryLocation');
+let placesKey = 'AIzaSyDlTjLdKgz2WmDEFZBqabdsQq5xPevC8dc';
 
-let finalResults = [];
-let displayResults = (locationsArr) => {
-    for(let i = 0; i < locationsArr.length; i++){
-        let lon = locationsArr[i].geometry.coordinates[0];
-        let lat = locationsArr[i].geometry.coordinates[1];
-
-        let markerCoords = [lon, lat];
-
-        let marker = new mapboxgl.Marker();
-        marker.setLngLat(markerCoords);
-        finalResults.push(marker);
-
-    }
+let displayMarkers = (locationsArr) => {
+    locationsArr.forEach(location => {
+        let placeCoords = location.geometry.location;
+        let placeMarker = new google.maps.Marker({position: placeCoords, map: map})
+    })
 }
 
-let getResults = (userCoords) => {
-    let mapboxSrc = `https://api.mapbox.com/geocoding/v5/mapbox.places/recycling%20center.json?access_token=${mapboxgl.accessToken}&cachebuster=1597184952478&autocomplete=true&proximity=${userCoords.lon}%2C${userCoords.lat}&limit=10`;
+let getPlaceResults = (userCoords) => {
+    let placesSrc = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${userCoords.lat},${userCoords.lng}&radius=20000&keyword='recycling center'&key=${placesKey}`
 
-    fetch(mapboxSrc)
+    fetch(proxy + placesSrc)
         .then((response) => (
             response.json()
         ))
 
         .then((data) => {
-            let locations = data.features;
-            console.log('JSON', data);
-            console.log('Locations', locations)
-            displayResults(locations);
+            let locations = data.results;
+            console.log('JSON', locations);
+            displayMarkers(locations);
         })
+
+        .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
 }
 
-let getGeoLocation = () => {
+let map;
+let initMap = (userCoords) => {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: userCoords.lat, lng: userCoords.lng },
+    zoom: 11
+  });
+}
+
+let getUserLocation = () => {
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition((position) => {
             let coordinates = position.coords;
 
             let userCoords = {
-                lat: coordinates.latitude,
-                lon: coordinates.longitude
+                lng: coordinates.longitude,
+                lat: coordinates.latitude
             }
-
-            console.log('Coords', userCoords)     
-
-            let map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v11',
-                center: [userCoords.lon, userCoords.lat],
-                zoom: 9
-            });
-
-            let userLocation = new mapboxgl.Marker();
-            userLocation.setLngLat([userCoords.lon, userCoords.lat]);
-            userLocation.addTo(map);
-
-            getResults(userCoords);
-
-            for(let x = 0; x < finalResults.length; x++){
-                finalResults[x].addTo(map);
-            }
-        })
+            
+            initMap(userCoords)
+            let marker = new google.maps.Marker({position: userCoords, map: map})
+            getPlaceResults(userCoords);
+            console.log('Coords', userCoords)
+        })    
     }
-}
+}    
+
+geolocationTrigger.onclick = () => getUserLocation();
