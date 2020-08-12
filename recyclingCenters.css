@@ -5,7 +5,7 @@
     flex-flow: column wrap;
 }
 
-button{
+.mapContainer button{
     margin-top: 30px;
     border-radius: 20px;
     padding: 20px;
@@ -13,19 +13,19 @@ button{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-button i{
+.mapContainer button i{
     background-color: rgb(86, 160, 216);
     padding: 20px;
     border-radius: 100%;
     font-size: 16px;
 }
 
-button span{
+.mapContainer button span{
     padding: 10px;
     font-size: 16px;
 }
 
-button:focus{
+.mapContainer button:focus{
     outline: none;
 }
 

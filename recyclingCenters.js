@@ -28,7 +28,7 @@ let displayMarkers = (locationsArr) => {
 }
 
 let getPlaceResults = (userCoords) => {
-    let placesSrc = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${userCoords.lat},${userCoords.lng}&radius=20000&keyword='recycling center'&key=${placesKey}`
+    let placesSrc = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${userCoords.lat},${userCoords.lng}&radius=20000&keyword='recycling center'&key=${placesKey}`;
 
     fetch(proxy + placesSrc)
         .then((response) => (
@@ -37,7 +37,6 @@ let getPlaceResults = (userCoords) => {
 
         .then((data) => {
             let locations = data.results;
-            console.log('JSON', locations);
             displayMarkers(locations);
         })
 
@@ -65,7 +64,6 @@ let getUserLocation = () => {
             initMap(userCoords)
             let marker = new google.maps.Marker({position: userCoords, map: map})
             getPlaceResults(userCoords);
-            console.log('Coords', userCoords)
         })    
     }
 }    
