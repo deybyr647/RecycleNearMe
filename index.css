@@ -3,6 +3,9 @@
 .quoteArea {
     display: flex;
     flex-flow: column wrap;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .quoteArea h4 {
