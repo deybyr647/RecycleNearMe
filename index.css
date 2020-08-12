@@ -3,7 +3,6 @@
 .quoteArea {
     display: flex;
     flex-flow: column wrap;
-    margin-top: 80px;
 }
 
 .quoteArea h4 {
