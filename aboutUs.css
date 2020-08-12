@@ -118,10 +118,3 @@
         font-size: 26px;
     }
 }
-
-@media(max-width: 500px) {
-    .topnav {
-        width: 90%;
-    }
-
-}

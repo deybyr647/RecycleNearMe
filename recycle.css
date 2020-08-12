@@ -28,9 +28,53 @@ body::-webkit-scrollbar-button {
     display: none
 }
 
+p{
+    font-family: 'Rowdies', cursive;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .fa-recycle{
+      animation: fa-recycle-spin infinite 12s linear;
+    }
+}
+
+@keyframes fa-recycle-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.description p{
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+a{
+    font-family: 'Oswald', sans-serif;
+}
+
+.team-member a{
+    font-family: 'Lemonada', cursive;
+}
+
+.team-member span{
+    font-family: 'Roboto', sans-serif;
+}
+
+.quote{
+    font-family: 'Lemonada', cursive;
+}
+
+.articles-container{
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
 .nav-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 40px;
 }
 
@@ -39,16 +83,18 @@ body::-webkit-scrollbar-button {
     background-color: rgb(96, 170, 226);
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     font-family: 'IBM Plex Sans', sans-serif;
-    width: 60%;
+    width: 80%;
+    
 }
 
 .topnav a {
     float: left;
     color: black;
     text-align: center;
-    padding: 15px;
+    padding: 13px;
     margin: auto;
     text-decoration: none;
     font-size: 16px;
@@ -63,11 +109,19 @@ body::-webkit-scrollbar-button {
 }
 
 .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
     margin-top: 20px;
     text-align: center;
     padding: 1rem;
     text-align: center;
     font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.footer p{
+    font-family: 'Red Rose', cursive;
 }
 
 a {
@@ -79,13 +133,21 @@ a:hover {
     color: #72dae7;
 }
 
+#inactive{
+    color: black;
+}
+
+#inactive:hover{
+    color: black;
+}
+
 @media(max-width: 500px) {
     .description {
         background-color: transparent;
         margin-left: 40px;
         margin-right: 40px;
         font-size: 15px;
-        font-family: cursive;
+        
     }
 
     .topnav {

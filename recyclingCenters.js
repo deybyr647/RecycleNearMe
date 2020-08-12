@@ -19,7 +19,7 @@ let displayMarkers = (locationsArr) => {
 
         let infoWindow = new google.maps.InfoWindow({content: contentString})
 
-        let placeMarker = new google.maps.Marker({position: placeCoords, map: map, title:'Test Title'})
+        let placeMarker = new google.maps.Marker({position: placeCoords, map: map, title:'Test Title', icon: 'assets/favicon.png'})
 
         placeMarker.addListener('click', () => {
             infoWindow.open(map, placeMarker);
