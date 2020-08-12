@@ -1,7 +1,31 @@
 /*Global Styles*/
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: rgb(228, 255, 235);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+body::-webkit-scrollbar {
+    background-color: #fff;
+    width: 16px
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #fff
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #babac0;
+    border-radius: 16px;
+    border: 4px solid #fff
+}
+
+body::-webkit-scrollbar-button {
+    display: none
 }
 
 .nav-container{
@@ -24,10 +48,10 @@ body {
     float: left;
     color: black;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     margin: auto;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .topnav i{
@@ -53,4 +77,18 @@ a {
 
 a:hover {
     color: #72dae7;
+}
+
+@media(max-width: 500px) {
+    .description {
+        background-color: transparent;
+        margin-left: 40px;
+        margin-right: 40px;
+        font-size: 15px;
+        font-family: cursive;
+    }
+
+    .topnav {
+        width: 90%;
+    }
 }

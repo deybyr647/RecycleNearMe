@@ -25,6 +25,7 @@
 }
 
 .article img {
+    display: flex;
     float: left;
     max-width: 300px;
     max-height: 150px;
@@ -41,11 +42,21 @@
     text-align: justify;
     padding: 20px;
 }
-@media(max-width: 500px)
-{
-    
-    .topnav
-    {
-        width: 92%;
+
+@media(max-width: 1000px) {
+
+    .articles-container{
+        margin-top: 25%;
+    }
+
+    .article {
+        display: block;
+        margin: 20px;
+        width: initial;
+    }
+
+    .article img {
+        margin: inherit;
+        width: 80%;
     }
 }

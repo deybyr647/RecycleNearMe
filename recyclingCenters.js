@@ -41,7 +41,7 @@ let getPlaceResults = (userCoords) => {
             displayMarkers(locations);
         })
 
-        .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+        .catch(() => console.log("Can’t access " + placesSrc + " response. Blocked by browser?"))
 }
 
 let map;
@@ -70,4 +70,5 @@ let getUserLocation = () => {
     }
 }    
 
+window.onload = () => getUserLocation();
 geolocationTrigger.onclick = () => getUserLocation();

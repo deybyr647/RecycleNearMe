@@ -1,5 +1,5 @@
 /*About Us Page*/
-.aboutUsBody{
+.aboutUsBody {
     background-color: #76a56a;
 }
 
@@ -31,8 +31,9 @@
     float: left;
     width: 250px;
     border-radius: 20px;
-    margin: 10px;
+    margin: inherit;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px;
 }
 
 .team-member h4 {
@@ -40,16 +41,17 @@
 }
 
 .team-member p {
+    clear: both;
     text-align: justify;
     padding: 20px;
 }
 
-.social-media-container{
+.social-media-container {
     display: flex;
     justify-content: center;
 }
 
-.social-medias{
+.social-medias {
     display: flex;
 }
 
@@ -62,7 +64,8 @@
 .social-medias li {
     list-style-type: none;
     float: left;
-    padding-right: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 20px;
 }
 
@@ -75,25 +78,51 @@
     font-size: 36px;
 }
 
-.social-medias i:hover{
+.social-medias i:hover {
     color: #72dae7;
 }
-@media(max-width: 870px)
-{
 
-}
-@media(max-width: 500px)
-{
-    .topnav
-    {
-        width: 80%;
+@media(max-width: 1000px) {
+
+    .aboutUs-container {
+        display: block;
     }
-    .team-member
-    {
+
+    .team-member {
+        display: block;
+        width: 90%;
+        margin: 20px;
+        margin-left: 5%;
+        margin-right: -5%;
+    }
+
+    .team-member img {
+        display:flex;
+        float: none;
+        margin: inherit;
+        padding: 5px;
+        width: 85%;
+    }
+
+    .social-medias {
+        display: block;
+    }
+
+    .social-medias ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row-reverse wrap;
+    }
+
+    .social-medias i {
+        font-size: 26px;
+    }
+}
+
+@media(max-width: 500px) {
+    .topnav {
         width: 90%;
     }
-    .bio
-    {
-        width: 8%;
-    }
+
 }
