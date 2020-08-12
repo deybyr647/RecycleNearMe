@@ -31,11 +31,10 @@ body::-webkit-scrollbar-button {
 .nav-container{
     display: flex;
     justify-content: center;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 .topnav {
-    position: fixed;
     border-radius: 50px;
     background-color: rgb(96, 170, 226);
     overflow: hidden;
