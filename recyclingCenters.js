@@ -5,7 +5,25 @@ let placesKey = 'AIzaSyDlTjLdKgz2WmDEFZBqabdsQq5xPevC8dc';
 let displayMarkers = (locationsArr) => {
     locationsArr.forEach(location => {
         let placeCoords = location.geometry.location;
-        let placeMarker = new google.maps.Marker({position: placeCoords, map: map})
+
+        let contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    `<h1 id="firstHeading" class="firstHeading">${location.name}</h1>` +
+    '<div id="bodyContent">' +
+    `<p> <a href=https://www.google.com/maps/@${placeCoords.lng},${placeCoords.lat}> Location </a>` +
+    `<br> ${location.vicinity}.</p>` +
+    "</div>" +
+    "</div>";
+
+        let infoWindow = new google.maps.InfoWindow({content: contentString})
+
+        let placeMarker = new google.maps.Marker({position: placeCoords, map: map, title:'Test Title'})
+
+        placeMarker.addListener('click', () => {
+            infoWindow.open(map, placeMarker);
+        })
     })
 }
 
