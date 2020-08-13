@@ -2,7 +2,32 @@ const proxy = 'https://cors-anywhere.herokuapp.com/';
 let geolocationTrigger = document.querySelector('#queryLocation');
 let placesKey = 'AIzaSyDlTjLdKgz2WmDEFZBqabdsQq5xPevC8dc';
 
+let capitalizeStr = (str) => {
+    let splitStr = str.toLowerCase().split(' ');
+    for(let l = 0; l < splitStr.length; l++){
+        splitStr[l] = splitStr[l].charAt(0).toUpperCase() + splitStr[l].substring(1);
+    }
+
+    return splitStr.join(' ');
+}
+
+let openStatus = (key) => {
+    let text;
+    if(key !== undefined){
+        if(key.open_now == true){
+            text = 'Yes';
+        } else{
+            text = 'No'
+        }
+    } else {
+        text = 'Unknown'
+    }
+
+    return text;
+}
+
 let displayMarkers = (locationsArr) => {
+
     locationsArr.forEach(location => {
         let placeCoords = location.geometry.location;
 
@@ -12,14 +37,15 @@ let displayMarkers = (locationsArr) => {
     "</div>" +
     `<h1 id="firstHeading" class="firstHeading">${location.name}</h1>` +
     '<div id="bodyContent">' +
-    `<p> <a href=https://www.google.com/maps/@${placeCoords.lng},${placeCoords.lat}> Location </a>` +
-    `<br> ${location.vicinity}.</p>` +
+    `<p>` +
+    `Status: ${capitalizeStr(location.business_status)} <br>
+    Address: ${location.vicinity} <br> Open Now? ${openStatus(location.opening_hours)}</p>` +
     "</div>" +
     "</div>";
 
         let infoWindow = new google.maps.InfoWindow({content: contentString})
 
-        let placeMarker = new google.maps.Marker({position: placeCoords, map: map, title:'Test Title', icon: 'assets/favicon.png'})
+        let placeMarker = new google.maps.Marker({position: placeCoords, map: map, title:`${location.name}`, icon: 'assets/favicon.png'})
 
         placeMarker.addListener('click', () => {
             infoWindow.open(map, placeMarker);
@@ -37,6 +63,7 @@ let getPlaceResults = (userCoords) => {
 
         .then((data) => {
             let locations = data.results;
+            console.log(locations);
             displayMarkers(locations);
         })
 
