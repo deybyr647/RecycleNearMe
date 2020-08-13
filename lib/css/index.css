@@ -96,6 +96,11 @@
     padding: 20px;
 }
 
+.teamMessages{
+    margin-top: 50px;
+    text-align: center;
+}
+
 @media(max-width: 1000px) {
     .description {
         text-align: center;

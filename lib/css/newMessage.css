@@ -1,0 +1,54 @@
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7FFF6;
+    width: 50%;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.messageForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+input{
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 2px solid #87D68D;
+}
+
+textarea{
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 2px solid #87D68D;
+}
+
+button{
+    padding: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+textarea:focus, input:focus{
+    outline: #87D68D solid 3px;
+}
+
+i{
+    border-radius: 100%;
+    padding: 20px;
+    background-color: rgb(96, 170, 226); 
+    font-size: 16px;
+}
+
+span{
+    padding: 10px;
+    font-size: 16px;
+}

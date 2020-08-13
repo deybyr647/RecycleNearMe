@@ -142,6 +142,10 @@ a:hover, i:hover {
     display: none;
 }*/
 
+h5{
+    font-size: 14px;
+}
+
 @media(max-width: 500px) {
 
     a:hover, i:hover {

@@ -32,8 +32,10 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
     </script>
-
+    <script defer src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="icon" href='assets/favicon.png'>
     <link rel='stylesheet' href='lib/css/recycle.css'>
+    <link rel='stylesheet' href='lib/css/newMessage.css'>
     <script defer src='lib/js/newMessage.js'></script>
 </head>
 <body>
@@ -49,11 +51,11 @@
     </div>
 
     <div class='formContainer'>
-        <form class='messageForm'>
+        <form class='messageForm' autocomplete="off">
             <input id='messageTitle' type='text' placeholder='Message Title...'>
             <input id='messageAuthor' type='text' placeholder='Message Author...'>
-            <input id='messageContent' type='text' placeholder='Message Content...'>
-            <button id='messageSubmit' type='submit'>Submit Message</button>
+            <textarea id='messageContent' placeholder='Message Content...'></textarea>
+            <button id='messageSubmit' type='submit'><i class="fas fa-sign-in-alt"></i> <span>Submit Message</span></button>
         </form>
     </div>
 
@@ -63,7 +65,7 @@
             <a href="https://deybyr647.com/" target="_blank" rel="noopener noreferrer">Deyby Rodriguez</a> |
             <a href="https://richardbrobbeyasc20.github.io/" target="_blank" rel="noopener noreferrer">Richard
                 Brobbey</a> |
-            <a href="https://elijahasc.github.io/" target="_blank" rel="noopener noreferrer">Elijah Cherisma</a>
+            <a href="https://elijahasc.github.io/" target="_blank" rel="noopener noreferrer">Elijah Cherisma</a> |
             <a class='zahvier' id='inactive'>Zahvier Walter</a>
         </p>
         <p>Copyright 2020 © RecycleNearMe | All rights reserved</p>
