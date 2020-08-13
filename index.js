@@ -28,7 +28,9 @@ let setQuote = () => {
 window.onload = setQuote();
 
 //Featured Articles
-let articlesSrc = `https://gnews.io/api/v3/search?image=required&max=2&q=recycling|ecology&token=4865d69f5b43d26383fdad98b6d5e27c`;
+const proxy = 'https://cors-anywhere.herokuapp.com/';
+let articlesSrc = `https://newsapi.org/v2/everything?q='what is recycling'&pageSize=3&apiKey=1a537385d7b54c8c958d1dce8e6c8ca0`;
+//let articlesSrc = `https://gnews.io/api/v3/search?image=required&max=2&q=recycling|ecology&token=4865d69f5b43d26383fdad98b6d5e27c`;
 let articlesContainer = document.querySelector('.articles-container');
 
 let displayArticles = (articleObj) => {
@@ -36,7 +38,7 @@ let displayArticles = (articleObj) => {
     articleCard.className = 'article';
 
     let articleImg = document.createElement('img');
-    articleImg.src = articleObj.image;
+    articleImg.src = articleObj.urlToImage; //image
     articleCard.appendChild(articleImg);
 
     let articleInfo = document.createElement('div');
@@ -45,6 +47,8 @@ let displayArticles = (articleObj) => {
     let articleHeader = document.createElement('h4');
     let articleLink = document.createElement('a');
     articleLink.href = articleObj.url;
+    articleLink.rel = 'noopener noreferrer';
+    articleLink.target = '_blank';
     articleLink.innerHTML = articleObj.title;
     articleHeader.appendChild(articleLink);
     articleInfo.appendChild(articleHeader);
@@ -59,7 +63,7 @@ let displayArticles = (articleObj) => {
 }
 
 let getArticles = () => {
-    fetch(articlesSrc)
+    fetch(proxy + articlesSrc)
         .then((response) => (
             response.json()
         ))
@@ -72,7 +76,8 @@ let getArticles = () => {
                 displayArticles(article);
             })
         })
+
+        .catch(() => console.log("Can’t access " + articlesSrc + " response. Blocked by browser?"))
 }
 
 window.onload = () => getArticles();
-
