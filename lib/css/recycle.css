@@ -67,7 +67,7 @@ a{
     font-family: 'Lemonada', cursive;
 }
 
-.articles-container{
+.articles-container, .teamMessages{
     font-family: 'Baloo Tamma 2', cursive;
 }
 

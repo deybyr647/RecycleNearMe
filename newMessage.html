@@ -1,17 +1,9 @@
 <!DOCTYPE html>
-<html lang='en-US'>
-
+<html lang="en">
 <head>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Lemonada&family=Oswald:wght@300&family=Red+Rose&family=Roboto:ital,wght@1,300&family=Rowdies:wght@300&display=swap"
-        rel="stylesheet">
-    <title>Recycling 101</title>
-    <meta name='description'
-        content="Learn about ecology and the benefits that are brought on the environment as a result of recycling. Find nearby recycling centers now!">
-    <meta name='keywords' content='Recycle, e-waste, global warming, recycling center, green new deal, ecology'>
-    <meta name='author' content='recyclenear.me team'>
-    <meta name='robots' content='index, follow'>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recyclenear.me</title>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
@@ -39,13 +31,8 @@
     </script>
 
     <link rel='stylesheet' href='lib/css/recycle.css'>
-    <link rel='stylesheet' href='lib/css/news.css'>
-    <link rel='stylesheet' href='lib/css/howTo.css'>
-    <link rel="icon" href='assets/favicon.png'>
-    <script defer src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script defer src='lib/js/howTo.js'></script>
+    <script defer src='lib/js/newMessage.js'></script>
 </head>
-
 <body>
     <div class='nav-container'>
         <div class="topnav">
@@ -58,12 +45,13 @@
         </div>
     </div>
 
-    <div class='teamMessages'>
-        <h3>Recommendations & Messages From Our Team</h3>
-    </div>
-
-    <div class='articles-container'>
-        <h3>Recycling Guidelines</h3>
+    <div class='formContainer'>
+        <form class='messageForm'>
+            <input id='messageTitle' type='text' placeholder='Message Title...'>
+            <input id='messageAuthor' type='text' placeholder='Message Author...'>
+            <input id='messageContent' type='text' placeholder='Message Content...'>
+            <button id='messageSubmit' type='submit'>Submit Message</button>
+        </form>
     </div>
 
     <div class="footer">
@@ -77,7 +65,6 @@
         </p>
         <p>Copyright 2020 © RecycleNearMe | All rights reserved</p>
     </div>
-
+    
 </body>
-
 </html>

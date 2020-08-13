@@ -1,0 +1,48 @@
+/*Articles*/
+.teamMessages{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    background-color: #87D68D;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 50px;
+}
+
+.message {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #F7FFF6;
+    margin: 20px;
+}
+
+.message h4, h5 {
+    text-align: center;
+}
+
+.message p {
+    text-align: justify;
+    padding: 20px;
+}
+
+@media(max-width: 1000px) {
+
+    .teamMessages{
+        margin-top: 25%;
+    }
+
+    .message {
+        display: block;
+        margin: 20px;
+        width: initial;
+    }
+
+}
